@@ -2,4 +2,8 @@
 TopStar.txt
 SkyChart.jar
 SkyChart.iml
+.classpath
+.idea/
+.project
+.settings/
 
