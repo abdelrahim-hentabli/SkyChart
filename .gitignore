@@ -1,9 +1,9 @@
 /bin/
 TopStar.txt
-SkyChart.jar
+*.jar
 SkyChart.iml
 .classpath
 .idea/
 .project
 .settings/
-
+/src/META-INF
