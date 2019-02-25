@@ -1,6 +1,6 @@
 import java.sql.*;
 
-import static jdk.nashorn.internal.objects.NativeString.trim;
+//import static jdk.nashorn.internal.objects.NativeString.trim;
 
 /**
  * Created by Rahim on 6/5/2017.

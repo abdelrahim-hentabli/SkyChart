@@ -6,8 +6,9 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
+import java.lang.*;
 
-import static jdk.nashorn.internal.objects.NativeString.trim;
+//import static jdk.nashorn.internal.objects.NativeString.trim;
 
 
 /**
@@ -53,11 +54,13 @@ public class Screen extends JFrame {
         time = new Time();
         location = new Coordinates(34.1478,118.1269);
 
-        //FileReader f = new FileReader("TopStars.txt");
-        //String[][] starList = f.getFile();
-
-        DatabaseReader d = new DatabaseReader();
-        String[][] starList = d.getDatabase();
+        FileReader f = new FileReader("TopStars.txt");
+        String[][] starList = f.getFile();
+        for(int i = 0; i < 300; i++){
+          System.out.println(starList[i][0]+starList[i][1]+starList[i][2]+starList[i][3]+starList[i][4]+"0"+starList[i][5]+starList[i][6]);
+        }
+        //DatabaseReader d = new DatabaseReader();
+        //String[][] starList = d.getDatabase();
 
         sky = new CelestialObject[300];
         for(int i = 0; i < 300; i++){
