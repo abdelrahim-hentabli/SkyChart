@@ -56,9 +56,7 @@ public class Screen extends JFrame {
 
         FileReader f = new FileReader("TopStars.txt");
         String[][] starList = f.getFile();
-        for(int i = 0; i < 300; i++){
-          System.out.println(starList[i][0]+starList[i][1]+starList[i][2]+starList[i][3]+starList[i][4]+"0"+starList[i][5]+starList[i][6]);
-        }
+        
         //DatabaseReader d = new DatabaseReader();
         //String[][] starList = d.getDatabase();
 
