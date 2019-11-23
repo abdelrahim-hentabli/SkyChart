@@ -60,7 +60,7 @@ public class Time {
 	}
 
 	/**
-	 *
+	 * Greenwich Mean Siderial Time
 	 * @return
 	 */
 	private double GST(){
