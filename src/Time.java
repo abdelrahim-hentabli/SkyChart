@@ -65,8 +65,7 @@ public class Time {
 	 */
 	private double GST(){
 
-		double d = (jd() -2451545);
-
+		double d = (jd() -2451545.5);
 		double T = d / 36525.0;
 		double temp = 6.697374558+(2400.051336 * T)+(.000025862 * Math.pow(T, 2));
 		temp = temp %24;
@@ -86,7 +85,7 @@ public class Time {
 
 	/**
 	 *
-	 * @return
+	 * @return the julian Date
 	 */
 	private double jd(){
 		int m = month;
