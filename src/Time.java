@@ -65,11 +65,12 @@ public class Time {
 	 */
 	private double GST(){
 
-		double d = (jd() -2451544.5);
+		double d = (jd() -2451545.0);
 		double T = d / 36525.0;
-		double temp = 6.697374558+(.06570982441908 * d)+ 1.002737909 * (hour + (minute / 60) + (second/3600)) + .000026 * Math.pow(T,2);
-		temp = temp %24;
-		if(temp < 0){
+		double temp = 6.697374558+ (.06570982441908 * d) + 1.00273790935 * (hour + (minute / 60.0) + (second/3600.0)) + .000026 * Math.pow(T,2);
+		//temp = temp %24;
+		/*
+    if(temp < 0){
 			temp+=24;
 		}
 		double UT = hour + .016666666666666666 * minute + .0002777777777777 * second;
@@ -79,7 +80,8 @@ public class Time {
 		}
 		if(temp > 24){
 			temp-=24;
-		}
+		}*/
+    temp = (temp - (((int)(temp/24)) * 24.0));
 		return temp;
 	}
 
