@@ -72,7 +72,7 @@ public class Star extends CelestialObject {
         if(LHA< 0){
         	LHA += 24;
         }
-        altitude = Math.toDegrees(Math.asin(((Math.sin(Math.toRadians(lattemp)) * Math.sin(Math.toRadians(declination))) + (Math.cos(Math.toRadians(lattemp)) * Math.cos(Math.toRadians(declination)) * Math.cos(Math.toRadians((LHA / 24.0) * 360.0))))));
+        altitude = Math.toDegrees(Math.asin((Math.sin(Math.toRadians(lattemp)) * Math.sin(Math.toRadians(declination))) + (Math.cos(Math.toRadians(lattemp)) * Math.cos(Math.toRadians(declination)) * Math.cos(Math.toRadians((LHA / 24.0) * 360.0)))));
         azimuth = Math.toDegrees(Math.acos((Math.sin(Math.toRadians(declination)) - (Math.sin(Math.toRadians(lattemp)) * Math.sin(Math.toRadians(altitude)))) / (Math.cos(Math.toRadians(lattemp)) * Math.cos(Math.toRadians(altitude)))));
         if(LHA > 0 && LHA < 12){
             azimuth = 360 - azimuth;
